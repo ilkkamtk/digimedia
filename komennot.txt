@@ -1,0 +1,8 @@
+git init
+  - vain ekalla kerralla
+git add .
+git commit -m jotain
+git remote add origin https://github.com/ilkkamtk/digimedia.git
+  - vain ekalla kerralla
+git push -u origin master
+  - jatkossa git push riittää
