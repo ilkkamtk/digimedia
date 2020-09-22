@@ -4,7 +4,11 @@ $(function() {
       $('ul').empty();
       $.each(data, function(index, value){
         console.log(index, value);
-        const html = `<li><h2>${value.show.name}</h2><a href=""></a> </li>`;
+        const html = `<li>
+                        <h2>${value.show.name}</h2>
+                        <a href="${value.show.officialSite}">Homepage</a>
+                        <img src="${value.show.image.medium}" alt="${value.show.name}">
+                      </li>`;
         $('ul').append($(html));
       });
     });
