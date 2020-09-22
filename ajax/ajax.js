@@ -6,7 +6,7 @@ $(function() {
         console.log(index, value);
         const html = `<li>
                         <h2>${value.show.name}</h2>
-                        <p>${palautaTeksti(value.show.genres)}</p>
+                        <p>${value.show.genres.join('&nbsp;|&nbsp;')}</p>
                         <a href="${value.show.officialSite ? value.show.officialSite : value.show.url}" target="_blank">Homepage</a>
                         <img src="${value.show.image ? value.show.image.medium : 'http://placekitten.com/200/300'}" alt="${value.show.name}">
                         ${value.show.summary}
@@ -15,13 +15,4 @@ $(function() {
       });
     });
   });
-
-  function palautaTeksti(taulukko){
-    let teksti = '';
-    $.each(taulukko, function(index, value){
-      teksti += value + '&nbsp;';
-    });
-    return teksti;
-  }
-
 });
